@@ -4,6 +4,7 @@ const PokemonCard = ({ name, image }) => {
   return (
     <div
       style={{
+        backgroundColor: "aquamarine",
         border: "1px solid #ccc",
         borderRadius: "10px",
         padding: "10px",
