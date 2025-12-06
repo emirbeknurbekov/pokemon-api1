@@ -1,2 +1,6 @@
 # Screen
-<img width="1878" height="718" alt="Снимок экрана 2025-11-22 180504" src="https://github.com/user-attachments/assets/358eb45e-8af6-4378-a436-6996b774a4cc" />
+<img width="1873" height="962" alt="image" src="https://github.com/user-attachments/assets/a4d4ede6-62ab-4e76-bef0-e017d493acf7" />
+<img width="1191" height="873" alt="image" src="https://github.com/user-attachments/assets/eaeb501f-cf1f-48a5-a356-d94a47297d0c" />
+<img width="1191" height="873" alt="image" src="https://github.com/user-attachments/assets/6655b17d-a30a-4e97-820f-921c2d6e70ef" />
+<img width="1910" height="859" alt="image" src="https://github.com/user-attachments/assets/d9e9d348-27c7-4659-bcb0-175e7a1b6322" />
+<img width="1910" height="859" alt="image" src="https://github.com/user-attachments/assets/f5155d17-ec43-417f-a899-77621185721a" />
