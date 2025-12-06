@@ -5,7 +5,7 @@ import PokemonDetail from "./pages/PokemonDetail";
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/pokemon-api1">
       <div style={{ padding: "20px" }}>
         <h1>Список Покемонов</h1>
         <Routes>
