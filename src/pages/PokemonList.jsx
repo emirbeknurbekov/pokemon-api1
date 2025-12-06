@@ -1,20 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import PokemonCard from "./PokemonCard";
-import { fetchPokemons } from "../services/api";
+import { getPokemons } from "../store/slices/pokemonSlice";
 
 const PokemonList = () => {
-  const [pokemons, setPokemons] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const dispatch = useDispatch();
+  const { list: pokemons, loading } = useSelector((state) => state.pokemon);
 
   useEffect(() => {
-    const loadData = async () => {
-      const data = await fetchPokemons(20);
-      setPokemons(data);
-      setLoading(false);
-    };
-
-    loadData();
-  }, []);
+    dispatch(getPokemons({ limit: 20 }));
+  }, [dispatch]);
 
   if (loading) return <h2>Загрузка покемонов...</h2>;
 
