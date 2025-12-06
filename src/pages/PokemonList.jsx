@@ -9,12 +9,9 @@ const PokemonList = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    // Fetch strictly once
     dispatch(getPokemons());
   }, [dispatch]);
 
-  // Derived state: Filtered list
-  // Memoize to avoid refiltering on every render if not needed
   const filteredPokemons = useMemo(() => {
     if (!searchTerm) {
       return pokemons;
@@ -24,16 +21,15 @@ const PokemonList = () => {
     );
   }, [pokemons, searchTerm]);
 
-  // Limit displayed items for performance (virtualization "lite")
   const displayList = filteredPokemons.slice(0, 50);
 
   const getPokemonImage = (url) => {
-    // url example: https://pokeapi.co/api/v2/pokemon/1/
     const id = url.split("/").filter(Boolean).pop();
     return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
   };
 
-  if (loading && pokemons.length === 0) return <h2>Загрузка базы покемонов...</h2>;
+  if (loading && pokemons.length === 0)
+    return <h2>Загрузка базы покемонов...</h2>;
 
   return (
     <div>
@@ -49,7 +45,7 @@ const PokemonList = () => {
             maxWidth: "400px",
             fontSize: "16px",
             borderRadius: "5px",
-            border: "1px solid #ccc"
+            border: "1px solid #ccc",
           }}
         />
       </div>
@@ -73,11 +69,6 @@ const PokemonList = () => {
           <h2>Покемоны не найдены</h2>
         )}
       </div>
-      {filteredPokemons.length > 50 && (
-        <p style={{ marginTop: "20px", color: "#666" }}>
-          Показано 50 из {filteredPokemons.length}. Уточните поиск.
-        </p>
-      )}
     </div>
   );
 };
